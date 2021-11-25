@@ -1,7 +1,7 @@
 function sigmoid_params = Sigmoid_parametrization(levels,g,ses)
 
 f_sigmoid = @(x, g) (1-g) ./ (1 + exp(-x)) + g;
-sigmoid_function = @(x,xdata)1+g./(1+exp(-(x(1)*xdata+x(2))));
+sigmoid_function = @(x,xdata)g+1./(1+exp(-(x(1)*xdata+x(2))));
 
 total_sims = levels^2;
 pars1 = [-3.5298; -3.6581; 5.0670]; % sigmoid model to go from synchronization to probability of correct response session1
